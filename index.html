@@ -34,7 +34,7 @@
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/1-22nYSIzNo" frameborder="0" allowfullscreen></iframe>
 
-<p>This software is simply an interface for using youtube-dl (<a href="http://yt-dl.org/">here</a>) as a video feed downloader. You simply log yourself to youtube and the application will automaticaly download the lattest videos from the channels you follow on youtube. The videos will be saved on your computer as a regular video file.</p>
+<p>This software is simply an interface for using youtube-dl (<a href="http://yt-dl.org/">here</a>) as a video feed downloader. You simply log yourself to youtube and the application will automatically download the latest videos from the channels you follow on youtube. The videos will be saved on your computer as a regular video file.</p>
 
 <h3><a name="download" class="anchor" href="#download"><span class="octicon octicon-link"></span></a>Download</h3>
 
@@ -59,7 +59,15 @@
 
 
 <h3><a name="configure" class="anchor" href="#configure"><span class="octicon octicon-link"></span></a>How to configure</h3>
-<p>To work the application just need a youtube tocken. For that you simply need to launch the application and click on the big login button. Then loggin to your youtube account and copie and past the code that will be generated into the application (as the Auth code) and let it do it's work.</p>
+<p>To work the application just need a youtube token. For that you simply need to launch the application and click on the big login button. Then login to your youtube account and copy and past the code that will be generated into the application (as the Auth code) and let it do it's work.</p>
+
+
+<h3><a name="1080p" class="anchor" href="#1080p"><span class="octicon octicon-link"></span></a>Get 1080p videos (Optional linux only)</h3>
+<p>Youtube enable you to get real HD videos (1080p and more). But localtube (youtube-dl actually) need to download the video and audio separately and then merge them. In order to do the merging you need to install ffmpeg. Once installed localtube will automatically switch to downloading the best quality available.<p>
+
+<div class="highlight">
+<pre><span class="no">sudo apt-get install ffmpeg</span></pre>
+</div>
 
         </section>
 
