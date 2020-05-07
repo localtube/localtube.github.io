@@ -4,6 +4,8 @@ variables:
   JEKYLL_ENV: production
   LC_ALL: C.UTF-8
 
+before_script:
+  - sudo apt install rsync
 
 test:
   stage: test
