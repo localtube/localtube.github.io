@@ -9,7 +9,7 @@ test:
   stage: test
   script:
   - mkdir test
-  - cp * ./test/
+  - cp -r * ./test/
   artifacts:
     paths:
     - test
@@ -20,7 +20,7 @@ pages:
   stage: deploy
   script:
   - mkdir public
-  - cp * ./public/
+  - cp -r * ./public/
   artifacts:
     paths:
     - public
