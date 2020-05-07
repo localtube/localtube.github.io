@@ -1,0 +1,28 @@
+image: ruby:2.3
+
+variables:
+  JEKYLL_ENV: production
+  LC_ALL: C.UTF-8
+
+
+test:
+  stage: test
+  script:
+  - mkdir test
+  - cp * ./test/
+  artifacts:
+    paths:
+    - test
+  except:
+  - master
+
+pages:
+  stage: deploy
+  script:
+  - mkdir public
+  - cp * ./public/
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
