@@ -1,16 +1,20 @@
-image: ruby:2.3
+image: instrumentisto/rsync-ssh
 
 variables:
   JEKYLL_ENV: production
   LC_ALL: C.UTF-8
 
+before_script:
+  - apt install rsync
+
 test:
   stage: test
   script:
   - mkdir test
+  - rsync -av --progress . ./test --exclude test
   artifacts:
     paths:
-    - .
+    - test
   except:
   - master
 
@@ -18,8 +22,9 @@ pages:
   stage: deploy
   script:
   - mkdir public
+  - rsync -av --progress . ./public --exclude public
   artifacts:
     paths:
-    - .
+    - public
   only:
   - master
