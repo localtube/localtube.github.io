@@ -11,10 +11,9 @@ test:
   stage: test
   script:
   - mkdir test
-  - rsync -av --progress . ./test --exclude test
   artifacts:
     paths:
-    - test
+    - .
   except:
   - master
 
@@ -22,9 +21,8 @@ pages:
   stage: deploy
   script:
   - mkdir public
-  - rsync -av --progress . ./public --exclude public
   artifacts:
     paths:
-    - public
+    - .
   only:
   - master
